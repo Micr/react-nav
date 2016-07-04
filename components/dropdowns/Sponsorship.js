@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 
 const Sponsorship = (props) => {
     return (
-        <div />
+        <div id="sponsorship_dropdown"/>
     )
 }
 

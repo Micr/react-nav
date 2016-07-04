@@ -1,17 +1,19 @@
 import { connect } from 'react-redux'
 import Menu from '../components/Menu'
-import { setState } from '../actions'
+import { setMenuState } from '../actions'
 
 const mapStateToProps = (state) => {
     return {
+        hoveredItem: state.menuHoveredItem
     };
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onFilterChange: (name, value) => {
+    onMouseOver: (value) => {
+        dispatch(setMenuState(value))
     }
-};
+}
 }
 
 export default connect(

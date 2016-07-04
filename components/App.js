@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
-import Menu from './Menu';
+import MenuContainer from '../containers/MenuContainer';
 
 const App = ({ children }) => (
   <main>
-    <Menu />
+    <MenuContainer />
     {children}
   </main>
 );

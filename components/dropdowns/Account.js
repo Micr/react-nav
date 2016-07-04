@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 
 const Account = (props) => {
     return (
-        <div />
+        <div id="account_dropdown"/>
     )
 }
 

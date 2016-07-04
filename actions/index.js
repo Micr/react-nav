@@ -1,4 +1,4 @@
-export const REQUEST_OFFERS = 'REQUEST_OFFERS';
+export const SHOW_DROPDOWN = 'SHOW_DROPDOWN';
 
 function setMenuState(item) {
     return {
