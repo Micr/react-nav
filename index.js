@@ -6,11 +6,14 @@ import createLogger from 'redux-logger';
 import { createStore, applyMiddleware } from 'redux';
 import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
 import App from './components/App';
-import ProductContainer from './containers/Product';
-import Faq from './components/Faq';
-import HomeContainer from './containers/HomeContainer';
-import ReviewsContainer from './containers/ReviewsContainer';
-import ServiceContainer from './containers/ServiceContainer';
+import Home from './components/Home';
+import Sponsorship from './components/Sponsorship';
+import Fundraising from './components/Fundraising';
+import About from './components/About';
+import ProductsContainer from './containers/ProductsContainer';
+import DesignLabContainer from './containers/DesignLabContainer';
+import TemplatesContainer from './containers/TemplatesContainer';
+import AccountContainer from './containers/AccountContainer';
 import reducer from './reducers';
 
 const loggerMiddleware = createLogger();
@@ -30,14 +33,14 @@ render((
   <Provider store={store}>
     <Router history={browserHistory}>
       <Route path="/" component={App}>
-        <IndexRoute component={HomeContainer} />
+        <IndexRoute component={Home} />
         <Route path="lab" component={DesignLabContainer}/>
-        <Route path="procuct" component={ProductContainer}/>
+        <Route path="products" component={ProductsContainer}/>
         <Route path="templates" component={TemplatesContainer}/>
         <Route path="sponsorship" component={Sponsorship}/>
         <Route path="fundraising" component={Fundraising}/>
         <Route path="about" component={About}/>
-        <Route path="account" component={Account}/>
+        <Route path="account" component={AccountContainer}/>
       </Route>
         {/*}<Route path="rent" component={Rent}/>
           <Route path="/reviews/:review" component={Review}/>
