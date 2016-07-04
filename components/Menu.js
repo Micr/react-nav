@@ -1,18 +1,19 @@
 import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
+import NavLink from './NavLink'
+import navObjects from '../navObjects'
 
 // TODO: send menu items as props from somewhere else
-const Menu = () => (
+const Menu = ({ hoveredItem }) => (
     <nav id="menu" className="navbar navbar-default navbar-static-top">
       <ul className="nav navbar-nav">
-        <li className="nav_menu__item"><Link to="/products">Products</Link></li>
-        <li className="nav_menu__item"><Link to="/lab">Design Lab</Link></li>
-        <li className="nav_menu__item"><Link to="/templates">Templates</Link></li>
-        <li className="nav_menu__item"><Link to="/sponsorship">Sponsorship</Link></li>
-        <li className="nav_menu__item"><Link to="/fundraising">Fundraising</Link></li>
-        <li className="nav_menu__item"><Link to="/about">About</Link></li>
-        <li className="nav_menu__item"><Link to="/account">Account</Link></li>
+        {
+            navObjects.map((obj, index) => {
+                <li className="nav_menu__item" key={index}><NavLink to={'/' + obj.name}>{obj.value}</NavLink></li>
+            })
+        }
       </ul>
+      <MenuDropdown item={hoveredItem} />
     </nav>
   )
 
