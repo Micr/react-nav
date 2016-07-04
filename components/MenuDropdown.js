@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
 
-const MenuDropdown = ({ conents }) => {
+const MenuDropdown = ({ type }) => {
     return (
-        <div />
+        type
     )
 }
 

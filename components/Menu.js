@@ -11,7 +11,7 @@ const Menu = ({ hoveredItem, onMouseOver }) => (
         {
             navObjects.map((obj, index) =>
             <li onMouseOver={() => onMouseOver(index)} className="nav_menu__item" key={index}>
-                <NavLink to={'/' + obj.name}>{obj.value}</NavLink>{hoveredItem === index && <MenuDropdown />}
+                <NavLink to={'/' + obj.name}>{obj.value}</NavLink>{hoveredItem === index && <obj.component />}
             </li>)
         }
       </ul>
