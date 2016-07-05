@@ -2,9 +2,7 @@ import { SHOW_DROPDOWN, HIDE_DROPDOWN, SHOW_PRODUCT_MENU } from '../actions';
 
 const initialState = {
   menu: {
-    hoveredItem: null,
     product: {
-      hoveredItem: null
     }
   }
 };
@@ -27,7 +25,7 @@ const reducer = (state = initialState, action) => {
     case HIDE_DROPDOWN:
       return Object.assign({}, state, {
         menu: Object.assign({}, state.menu, {
-          hoveredItem: null 
+          hoveredItem: null
         })
       });
     case SHOW_PRODUCT_MENU:

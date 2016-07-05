@@ -3,7 +3,6 @@ import productTypes from '../../productTypes'
 import ProductItem from '../ProductItem'
 
 const Products = ({ className, onProductMouseOver, hoveredProductItem }) => {
-    hoveredProductItem = hoveredProductItem || 0;
     return (
         <div className={className} id="products_dropdown">
           <ul className="nav_product_list">
@@ -17,5 +16,7 @@ const Products = ({ className, onProductMouseOver, hoveredProductItem }) => {
         </div>
     )
 }
+
+Products.defaultProps = { hoveredProductItem: 0 };
 
 export default Products
