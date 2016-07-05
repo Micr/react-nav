@@ -53,4 +53,7 @@ html, body {
     position: relative;
     display: inline-flex;
   }
+  .nav>.nav_menu__item {
+    position: static;
+  }
 }
