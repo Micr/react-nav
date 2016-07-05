@@ -14,6 +14,9 @@ const mapDispatchToProps = (dispatch) => {
     onMouseOver: (value) => {
         dispatch(setMenuState(value))
     },
+    onMouseOut: () => {
+        dispatch(setMenuState(null))
+    },
     onProductMouseOver: (value) => {
       dispatch(setProductMenuState(value))
     }

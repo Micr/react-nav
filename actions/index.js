@@ -1,9 +1,10 @@
 export const SHOW_DROPDOWN = 'SHOW_DROPDOWN';
+export const HIDE_DROPDOWN = 'HIDE_DROPDOWN';
 export const SHOW_PRODUCT_MENU = 'SHOW_PRODUCT_MENU';
 
 function setMenuState(item) {
     return {
-        type: SHOW_DROPDOWN,
+        type: item === parseInt(item, 10) ? SHOW_DROPDOWN : HIDE_DROPDOWN,
         item: item
     };
 }

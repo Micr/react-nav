@@ -34,11 +34,14 @@ html, body {
 }
 @media (min-width: 992px) {
   .menu_dropdown {
+    height: 300px;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .nav__product_item_block {
     flex-grow: 1;
