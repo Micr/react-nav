@@ -1,25 +1,40 @@
-import { SHOW_DROPDOWN } from '../actions';
+import { SHOW_DROPDOWN, SHOW_PRODUCT_MENU } from '../actions';
 
 const initialState = {
-    menuHoveredItem: null
+  menu: {
+    hoveredItem: null,
+    product: {
+      hoveredItem: null
+    }
+  }
 };
 
 /**
- *	reduces a store
- * @param  {Array} store - current store
- * @param  {Object} action - an action to perform
- * @return {Array} new store
+ * reduces a state
+ * @param {Array} state - current state
+ * @param {Object} action - an action to perform
+ * @return {Array} new state
  */
 const reducer = (state = initialState, action) => {
 
-    switch(action.type) {
-        case SHOW_DROPDOWN:
-            return Object.assign({}, state, {
-                menuHoveredItem: action.item
-            })
-    }
+  switch(action.type) {
+    case SHOW_DROPDOWN:
+      return Object.assign({}, state, {
+        menu: Object.assign({}, state.menu, {
+          hoveredItem: action.item
+        })
+      });
+    case SHOW_PRODUCT_MENU:
+      return Object.assign({}, state, {
+        menu: Object.assign({}, state.menu, {
+          product: {
+            hoveredItem: action.item
+          }
+        })
+      });
+  }
 
-    return state;
+  return state;
 }
 
 export default reducer;

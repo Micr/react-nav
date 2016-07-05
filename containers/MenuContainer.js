@@ -1,10 +1,11 @@
 import { connect } from 'react-redux'
 import Menu from '../components/Menu'
-import { setMenuState } from '../actions'
+import { setMenuState, setProductMenuState } from '../actions'
 
 const mapStateToProps = (state) => {
     return {
-        hoveredItem: state.menuHoveredItem
+        hoveredItem: state.menu.hoveredItem,
+        hoveredProductItem: state.menu.product.hoveredItem
     };
 }
 
@@ -12,8 +13,11 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onMouseOver: (value) => {
         dispatch(setMenuState(value))
+    },
+    onProductMouseOver: (value) => {
+      dispatch(setProductMenuState(value))
     }
-}
+  }
 }
 
 export default connect(

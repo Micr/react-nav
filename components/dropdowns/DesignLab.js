@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 
 const DesignLab = (props) => {
     return (
-        <div id="lab_dropdown"/>
+        <div {...props} id="lab_dropdown"/>
     )
 }
 
