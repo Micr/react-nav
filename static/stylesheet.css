@@ -20,6 +20,7 @@ html, body {
     padding: 10px;
     background-color: #eee;
     margin: 0 5px;
+    cursor: pointer;
 }
 
 .nav_product_list {
@@ -31,10 +32,22 @@ html, body {
 .nav_product_list {
   cursor: pointer;
   line-height: 30px;
+  width: 30%;
+  border-right: 1px solid #eee;
 }
+
+.nav_product_list li {
+  padding-left: 10px;
+}
+
+.nav_product_list li.active {
+  background-color: orange;
+  color: #fff;
+}
+
 @media (min-width: 992px) {
   .menu_dropdown {
-    height: 300px;
+    height: 309px;
     position: absolute;
     top: 100%;
     left: 0;
@@ -48,6 +61,8 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    box-shadow: -8px 0px 19px -10px #8c8c8c;
   }
   #navigation_container {
     position: relative;
@@ -55,5 +70,8 @@ html, body {
   }
   .nav>.nav_menu__item {
     position: static;
+  }
+  .nav_product_list li:not(:first-child) {
+    border-top: 1px solid #eee;
   }
 }

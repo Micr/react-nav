@@ -11,7 +11,7 @@ const Menu = ({ hoveredItem, onMouseOver, onMouseOut, ...other }) => {
           <ul className="nav navbar-nav">
             {
               navObjects.map((obj, index) =>
-              <li onMouseEnter={() => onMouseOver(index)} onMouseLeave={() => onMouseOut()} className="nav_menu__item" key={index}>
+              <li onMouseEnter={() => onMouseOver(index)} onMouseLeave={() => onMouseOut() } className="nav_menu__item" key={index}>
                       <NavLink to={'/' + obj.name}>{obj.value}</NavLink>
                   {
                       hoveredItem === index && <obj.component { ...other } className="menu_dropdown"/>
