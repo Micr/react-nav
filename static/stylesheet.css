@@ -7,13 +7,47 @@ html, body {
   display: none;
 }
 
+#menu {
+  display: flex;
+  justify-content: center;
+}
+
+.menu_dropdown {
+  box-shadow: 1px 1px 1px 1px #e0e0e0;
+}
+
 .nav_menu__item {
     padding: 10px;
     background-color: #eee;
     margin: 0 5px;
 }
+
+.nav_product_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav_product_list {
+  cursor: pointer;
+  line-height: 30px;
+}
 @media (min-width: 992px) {
   .menu_dropdown {
     position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: flex;
+  }
+  .nav__product_item_block {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #navigation_container {
+    position: relative;
+    display: inline-flex;
   }
 }
